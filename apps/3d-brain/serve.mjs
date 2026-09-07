@@ -16,10 +16,12 @@ const load=(refresh=false)=>{ if(!pending || refresh) pending=buildGraph(configF
 const send=(res,status,value,type='application/json; charset=utf-8')=>{res.writeHead(status,{'content-type':type,'cache-control':'no-store','x-content-type-options':'nosniff'});res.end(typeof value==='string' || Buffer.isBuffer(value)?value:JSON.stringify(value));};
 const publicFiles=new Map([['/',['index.html','text/html; charset=utf-8']],['/index.html',['index.html','text/html; charset=utf-8']],['/style.css',['style.css','text/css; charset=utf-8']],['/dist/app.js',['dist/app.js','text/javascript; charset=utf-8']]]);
 const allowedHosts=new Set([`localhost:${port}`,`127.0.0.1:${port}`]);
+// The AI OS Mac app embeds this page in an <iframe>; its own origin is the Tauri scheme.
+const shellOrigins=new Set(['tauri://localhost','http://tauri.localhost','https://tauri.localhost']);
 const server=http.createServer(async(req,res)=>{
   try {
     if(!allowedHosts.has(req.headers.host)) return send(res,403,{error:'Local requests only.'});
-    if(req.headers.origin && !allowedHosts.has(new URL(req.headers.origin).host)) return send(res,403,{error:'Cross-origin request rejected.'});
+    if(req.headers.origin && !allowedHosts.has(new URL(req.headers.origin).host) && !shellOrigins.has(req.headers.origin)) return send(res,403,{error:'Cross-origin request rejected.'});
     if(req.method!=='GET') return send(res,405,{error:'Read-only server.'});
     const url=new URL(req.url,`http://127.0.0.1:${port}`);
     if(publicFiles.has(url.pathname)){const [file,type]=publicFiles.get(url.pathname);return send(res,200,await fs.readFile(path.join(HERE,file)),type);}

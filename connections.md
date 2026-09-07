@@ -5,9 +5,9 @@ Registry of every system your AIOS can reach. Filled by `/onboard` from Q4-Q7 an
 | # | Domain | Tool | Mechanism | Auth | Last checked |
 |---|---|---|---|---|---|
 | 1 | Revenue / Financials | Stripe (bank payout coming); Etsy + YouTube not paying yet | not yet connected | — | — |
-| 2 | Customer interactions | Gmail (personal), iMessage, cold email; referrals bring most clients | not yet connected | — | — |
-| 3 | Calendar | Google Calendar (inferred from Gmail) | not yet connected | — | — |
-| 4 | Communication | Gmail, iMessage. No team channel (solo) | not yet connected | — | — |
+| 2 | Customer interactions | Gmail (personal), iMessage, cold email; referrals bring most clients | Gmail: `mcp` (claude.ai Gmail connector, hosted by Google; see `references/gmail-api.md`). iMessage: not yet connected | OAuth on claude.ai, account-level, no local key | 2026-09-07 connected (live inbox read) |
+| 3 | Calendar | Google Calendar | `mcp` (claude.ai Google Calendar connector, same mechanism as Gmail; see `references/google-calendar-api.md`) | OAuth on claude.ai. **Staged, needs OAuth click:** claude.ai → Settings → Connectors → Google Calendar → Connect | 2026-09-07 staged, not yet live |
+| 4 | Communication | Gmail, iMessage. No team channel (solo) | Gmail: `mcp` (same claude.ai Gmail connector as row 2). iMessage: not yet connected | OAuth on claude.ai | 2026-09-07 Gmail connected; iMessage — |
 | 5 | Project / task tracking | Obsidian (SchoolWork vault) + Canvas | not yet connected | — | — |
 | 6 | Meeting intelligence | None. No call recorder | not yet connected | — | — |
 | 7 | Knowledge / files | Google Drive; Obsidian vaults on GitHub (PageCrispBrain, HermesClawVault, SchoolWork) | not yet connected | — | — |

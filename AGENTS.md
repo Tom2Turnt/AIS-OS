@@ -46,14 +46,22 @@ Match the register in `references/voice.md`. Casual but professional. Short sent
 
 ## Connections
 
-Registry with status lives in `connections.md`. Nothing is wired yet as of 2026-09-07.
+Registry with status lives in `connections.md`. Wired on 2026-09-07:
 
-- Revenue: Stripe (bank payout coming). Etsy and YouTube not paying yet.
-- Customers and comms: Gmail (personal), iMessage, some cold email. Referrals bring most clients.
-- Calendar: Google Calendar.
-- Tasks: Obsidian (SchoolWork vault) and Canvas.
-- Meetings: nothing recorded.
-- Knowledge: Google Drive, plus Obsidian vaults on GitHub (PageCrispBrain, HermesClawVault, SchoolWork).
+- Gmail (personal): live via the claude.ai Gmail connector (MCP, account-level). Tools start with `mcp__claude_ai_Gmail__`. Guide: `references/gmail-api.md`. Read freely; show me a draft before sending anything.
+- Google Calendar: claude.ai Google Calendar connector. Guide: `references/google-calendar-api.md`. Once connected, tools start with `mcp__claude_ai_Google_Calendar__`. Read freely; show me before creating, moving, or deleting events.
+- Google Drive: already connected via the claude.ai Google Drive connector (`mcp__claude_ai_Google_Drive__`), not yet documented in `references/`.
+- Health check: `claude mcp list`. Re-auth lives at https://claude.ai/settings/connectors (personal Chrome profile).
+
+Still not wired: Stripe, iMessage, Obsidian/Canvas as live sources, meetings (none recorded).
+
+## Cadence
+
+Two launchd jobs run without being asked. Details and pause/resume in `references/cadence.md`.
+
+- 03:30 `com.tomgabel.aios.nightly`: mirrors the VPS vault, pulls the three Obsidian vaults, rebuilds the 3D brain. Log: `logs/cadence.log`.
+- 07:00 `com.tomgabel.aios.morning`: writes `briefs/YYYY-MM-DD.md` from the context files and shows a notification. A closed laptop gets it on wake.
+- When I ask "what should I focus on today", read today's brief first if it exists, then the context files.
 
 ## How you work with me
 
