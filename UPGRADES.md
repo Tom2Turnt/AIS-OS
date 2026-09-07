@@ -4,7 +4,7 @@ Everything below is added on top of [Nate Herk's AIS-OS](https://github.com/nate
 
 | Upgrade | What it does | Where |
 |---|---|---|
-| **AI OS Mac app** | One click opens the 3D brain in a native window. Starts the local server itself, stops it on quit. Adds a Connections tab for MCP servers, API keys, and a Four Cs status board. | Separate repo: [`ai-os-app`](https://github.com/Tom2Turnt/ai-os-app) |
+| **AI OS Mac app** (v1.1.0) | One click opens the 3D brain in a native window; starts the local server itself, stops it on quit. A second tab, **System**, is a dashboard of the Four Cs: Context (your files), Cadence (scheduled jobs, logs, briefs), Connections (registry, MCP servers, API keys, CRM-style cards with status), Settings (permissions view-only, app paths, custom values, skills). Add, edit, and remove in every section; everything writes to the real kit files. | Separate repo: [`ai-os-app`](https://github.com/Tom2Turnt/ai-os-app) |
 | **Google connection** | Gmail + Google Calendar wired in so "what's on my calendar tomorrow" answers with live data. | `connections.md`, `references/gmail-api.md`, `references/google-calendar-api.md` |
 | **Nightly cadence** | Mirrors remote vaults, rebuilds the brain, and drops a morning brief while the laptop is closed. | `scripts/`, `references/cadence.md` |
 
