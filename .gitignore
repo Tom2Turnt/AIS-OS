@@ -7,3 +7,10 @@ node_modules/
 .claude/settings.local.json
 audits/
 brainstorms/
+
+# Personal context stays local (this fork is public). Templates are still in the kit.
+context/
+references/voice.md
+apps/3d-brain/brain.config.json
+apps/3d-brain/data/
+apps/3d-brain/node_modules/

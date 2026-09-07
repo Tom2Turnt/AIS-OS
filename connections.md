@@ -4,13 +4,13 @@ Registry of every system your AIOS can reach. Filled by `/onboard` from Q4-Q7 an
 
 | # | Domain | Tool | Mechanism | Auth | Last checked |
 |---|---|---|---|---|---|
-| 1 | Revenue / Financials | _filled by /onboard_ | not yet connected | — | — |
-| 2 | Customer interactions | _filled by /onboard_ | not yet connected | — | — |
-| 3 | Calendar | _filled by /onboard_ | not yet connected | — | — |
-| 4 | Communication | _filled by /onboard_ | not yet connected | — | — |
-| 5 | Project / task tracking | _filled by /onboard_ | not yet connected | — | — |
-| 6 | Meeting intelligence | _filled by /onboard_ | not yet connected | — | — |
-| 7 | Knowledge / files | _filled by /onboard_ | not yet connected | — | — |
+| 1 | Revenue / Financials | Stripe (bank payout coming); Etsy + YouTube not paying yet | not yet connected | — | — |
+| 2 | Customer interactions | Gmail (personal), iMessage, cold email; referrals bring most clients | not yet connected | — | — |
+| 3 | Calendar | Google Calendar (inferred from Gmail) | not yet connected | — | — |
+| 4 | Communication | Gmail, iMessage. No team channel (solo) | not yet connected | — | — |
+| 5 | Project / task tracking | Obsidian (SchoolWork vault) + Canvas | not yet connected | — | — |
+| 6 | Meeting intelligence | None. No call recorder | not yet connected | — | — |
+| 7 | Knowledge / files | Google Drive; Obsidian vaults on GitHub (PageCrispBrain, HermesClawVault, SchoolWork) | not yet connected | — | — |
 
 **Mechanism options:** `mcp` (MCP server), `script` (Python/Bash hitting an API, in `scripts/`), `export` (CSV/JSON dump pipeline), `key+ref` (`.env` key + `references/{tool}-api.md` guide), `not yet connected`.
 

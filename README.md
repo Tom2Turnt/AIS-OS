@@ -1,5 +1,7 @@
 # AIS-OS: AI Operating System starter kit for Claude Code and Codex
 
+> **This is Tommy Gabel's fork of [Nate Herk's AIS-OS](https://github.com/nateherkai/AIS-OS).** The kit, the Three Ms, and the Four Cs are Nate's work. What I added on top is listed in [`UPGRADES.md`](UPGRADES.md): a Mac app for the 3D brain, a wired Google connection, and a nightly cadence that runs while the laptop is closed.
+
 A free, MIT-licensed starter kit that turns Claude Code or Codex into your personal **AI Operating System (AI OS)**. Audience: anyone building automations — solopreneurs, small business operators, managers, creators, AI consultants. Pairs with a companion masterclass video.
 
 The kit personalizes itself to you via an `/onboard` interview. Use `/grill-me` whenever you want to deepen its understanding of your business, preferences, or plans. Use `/link` to make new information findable, `/audit` to verify the system, `/level-up` to close one useful gap at a time, and `/3d-brain` to explore your saved knowledge as an interactive globe.
